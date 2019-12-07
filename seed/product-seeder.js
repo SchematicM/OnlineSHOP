@@ -2,7 +2,7 @@ var Product = require('../models/product');
 
 
 var mongoose = require('mongoose');
-mongoose.connect('localhost:27017/shopping');
+mongoose.connect('mongodb://localhost:27017/shopping',{ useUnifiedTopology: true });
 
 var products = [
 	new Product({
@@ -40,6 +40,7 @@ var products = [
 var done = 0;
 for(var i = 0; i < products.length; i++)
 {
+	//console.log(products[i]);
 	products[i].save(function(err, result)
 		{
 			done++;
