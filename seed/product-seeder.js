@@ -12,7 +12,7 @@ var products = [
 	price: 10
 	}),
 	new Product({
-	imagePath:'https://static8.depositphotos.com/1036149/891/i/450/depositphotos_8911201-stock-photo-funny-germ-3d.jpg',
+	imagePath:'https://static8.depositphotos.com/1036149/863/i/950/depositphotos_8639500-stock-photo-funny-germ-3d.jpg',
 	title: 'Mikrob',
 	description: 'Awesome Mikrob!!!',
 	price: 20
