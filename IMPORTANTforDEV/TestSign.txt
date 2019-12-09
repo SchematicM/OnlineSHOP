@@ -1,0 +1,48 @@
+We have 4 verificated users:
+	*E-mail: test@test.com
+	 Password:1111
+	*E-mail: tyxa.khoma16@gmail.com
+	 Password:1111
+	*E-mail: tyxa.khoma17@gmail.com
+	 Password:1111
+	*//Add your user here and change count 
+
+1) Check Sign Up(registration):
+	a) Go to -> http://localhost:3000/user/signup
+	b)ERROR: Missing credentials 
+		-if we enter only one field("E-mail" OR "Password")
+	c)ERROR: Invalid e-mail
+		-if we enter text, which is not an e-mail in "E-mail" field
+	d)ERROR: Invalid password
+		-if we enter text, which is horter than 4 characters in "Password" field
+	e)ERROR: Ooops... Email is already in use(
+		-if we want to verificate user with e-mail, which is already signed up
+
+2)Check Sign In(entranse):
+a) Go to -> http://localhost:3000/user/signin
+	b)ERROR: Missing credentials 
+		-if we enter only one field("E-mail" OR "Password")
+	c)ERROR: Invalid e-mail
+		-if we enter text, which is not an e-mail in "E-mail" field
+	d)ERROR: Ooops... Wrong password(
+		-if we enter password, which is not associated with corresponding e-mail
+	e)ERROR: Ooops... No user found(
+		-if we want to verificate user with e-mail, which is not already signed up
+
+3)TASK FOR YOU: 
+	a)Try to add user with your own e-mail and with default password(1111), 
+	testing before it all error's type,which I have listed before. 
+	Add your user to the verificated users at the top of this file.
+	b)Test all that you only want to test this forms globally, 
+	  especially kind of error described in BUGs part
+	  (if you find some other bugs, write them down here)
+	c)Try to fix BUGs, if it is not done by someone before :)
+
+4)BUGs:
+	a)ERROR: invalid csrf token    !!!(appeared twice)!!!
+		 -if in signUp page enter test in "E-mail" field and
+		  11 in "Password" field
+
+PS: If you find some mistakes in this text - correct them!Thanks)
+
+	
