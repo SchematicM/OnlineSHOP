@@ -5,7 +5,8 @@ We have 4 verificated users:
 	 Password:1111
 	*E-mail: tyxa.khoma17@gmail.com
 	 Password:1111
-	*//Add your user here and change count 
+	*E-mail: Solomiyar2000@gmail.com
+	 Password:1111
 
 1) Check Sign Up(registration):
 	a) Go to -> http://localhost:3000/user/signup
@@ -39,9 +40,10 @@ a) Go to -> http://localhost:3000/user/signin
 	c)Try to fix BUGs, if it is not done by someone before :)
 
 4)BUGs:
-	a)ERROR: invalid csrf token    !!!(appeared twice)!!!
+	DONE a)ERROR: invalid csrf token    !!!(appeared twice)!!!
 		 -if in signUp page enter test in "E-mail" field and
 		  11 in "Password" field
+	b)ERROR: sign in User Profile when we enter User name and password, which is already exist on the page of sign up
 
 PS: If you find some mistakes in this text - correct them!Thanks)
 
