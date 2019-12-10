@@ -28,7 +28,8 @@ passport.use('local.signup', new LocalStrategy(
 	if(errors)
 	{
 		var messages = [];
-		errors.forEach(function(error){
+		errors.forEach(function(error)
+		{
 			messages.push(error.msg);
 		});
 		return done(null,false,req.flash('error',messages));
