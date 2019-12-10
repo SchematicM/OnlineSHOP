@@ -1,0 +1,15 @@
+Check smth:
+ a)Go to -> http://localhost:3000
+	then 
+   Go to -> http://localhost:3000/user/profile
+	then it should go to -> http://localhost:3000
+
+ b)Go to -> http://localhost:3000/user/signin and sign in some user
+	then it should go to -> http://localhost:3000/user/profile
+
+   And if you go to -> http://localhost:3000/user/signin again
+	then it should go to -> http://localhost:3000
+
+I hope all is right:)
+
+
