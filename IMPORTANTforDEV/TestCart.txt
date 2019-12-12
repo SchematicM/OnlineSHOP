@@ -1,0 +1,7 @@
+Check please:
+	1) Add some items in cart (not matter how many)  
+	2) Go to Cart and you can see theese items
+	3) If you want to delete all theese items you should press Fn+F12(or just F12)
+	and go to Application -> Cookies -> localhost:3000 -> and delete the last one (like smth connect.sid..)
+That's all)
+	
