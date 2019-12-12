@@ -25,7 +25,7 @@ router.use('/', notLoggedIn, function(req, res, next)
 router.get('/signup', function(req, res, next)
 {
 	var messages = req.flash('error');
-	res.resender('user/signup', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
+	res.render('user/signup', {csrfToken: req.csrfToken(), messages: messages, hasErrors: messages.length > 0});
 });
 
 router.post('/signup', passport.authenticate('local.signup', 
