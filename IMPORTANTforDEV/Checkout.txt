@@ -1,0 +1,14 @@
+I did checkout page
+	Try this: ( ShoppingCart(with some goods inside) -> 
+			button "Checkout"-> write down smth on the fields
+			-> button "Buy now")
+We are faced with some problms here:
+	a)if we write down incorrect card number - nothing changes(but 
+	  have to rise an error message about incorrect card number)
+	b)if we write down correct card number(4242 4242 4242 4242) - rise 
+	  an error 404, and it is OK on this stage of developing
+
+This is the 15th video, and honestly, I was trying to find my mistake there,
+but unfortunately, all my attempts was not successful. Hope you are 
+luckier than me. 
+Thanks for your attention and tolerance.)
