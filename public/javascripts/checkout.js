@@ -1,10 +1,12 @@
 Stripe.setPublishableKey('pk_test_4I1AdRu8tvq80jO7iiFwka0A00OILIbS5M');
 var $form = $('#checkout-form');
 
-$form.submit(function (event) {
+$form.submit(function (event) 
+{
     $('#charge-error').addClass('hidden');
     $form.find('button').prop('disabled', true);
-    Stripe.card.createToken({
+    Stripe.card.createToken(
+    {
         number: $('#card-number').val(),
         cvc: $('#card-cvc').val(),
         exp_month: $('#card-expiry-month').val(),
@@ -15,14 +17,15 @@ $form.submit(function (event) {
 });
 
 function stripeResponseHandler(status, response) {
-    if (response.error) { // Problem!
-
+    if (response.error) 
+    { // Problem!
         // Show the errors on the form
         $('#charge-error').text(response.error.message);
         $('#charge-error').removeClass('hidden');
         $form.find('button').prop('disabled', false); // Re-enable submission
-
-    } else { // Token was created!
+    } 
+    else 
+    { // Token was created!
 
         // Get the token ID:
         var token = response.id;
