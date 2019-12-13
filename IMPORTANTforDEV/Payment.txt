@@ -1,0 +1,10 @@
+Try the Payment:
+	Add some items in the cart ->
+	Click Checkout ->
+	Write down smth on the fields 
+	(write down correct card number(4242 4242 4242 4242)) -> 
+	Click button "Buy now" ->
+	And all should work!
+Good luck:)
+	
+	
