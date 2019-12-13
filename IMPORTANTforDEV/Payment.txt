@@ -5,6 +5,17 @@ Try the Payment:
 	(write down correct card number(4242 4242 4242 4242)) -> 
 	Click button "Buy now" ->
 	And all should work!
+
+To see this payment in the database, you should 
+	Run our database ->
+	use shopping -> db.orders.find()
+	And there you'll see your payment
+
+
+All this process you can see on https://dashboard.stripe.com/test/dashboard
+and also in Payments on https://dashboard.stripe.com/test/payments
+
+
 Good luck:)
 	
 	
