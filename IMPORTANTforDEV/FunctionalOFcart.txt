@@ -1,0 +1,7 @@
+I have added functional on shopping cart such as:
+	a) Reduce by 1 ( make count of this product less on 1)
+		- add 3 the same itemms into cart -> Action ->reduce by 1
+		  (count of this item become 2)
+	b) Remove All ( remove all  amount of this product from the cart)
+		- add 3 the same itemms into cart -> Action ->remove all 
+		  (this item disappeared from the cart)
