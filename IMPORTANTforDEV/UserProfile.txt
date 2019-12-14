@@ -1,0 +1,4 @@
+I have made user profile, where your buyer can see his all purchases 
+during all the time.
+How to see changes:
+	go to -> http://localhost:3000/user/profile
