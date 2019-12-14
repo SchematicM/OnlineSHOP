@@ -8,7 +8,6 @@ We are faced with some problms here:
 	b)if we write down correct card number(4242 4242 4242 4242) - rise 
 	  an error 404, and it is OK on this stage of developing
 
-This is the 15th video, and honestly, I was trying to find my mistake there,
-but unfortunately, all my attempts was not successful. Hope you are 
+I was trying to find my mistake there, but unfortunately, all my attempts was not successful. Hope you are 
 luckier than me. 
 Thanks for your attention and tolerance.)
