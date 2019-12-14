@@ -1,0 +1,7 @@
+Nothing very important ;) 
+I have just made redirection on Sign In page when you want to 
+buy something without entrance into your personal account. 
+There are hipertext with redirection on Sign Up page, in case 
+you do not have an account on this online shop.
+
+Try it by yourself, if you want( it is not necessary )
