@@ -438,6 +438,8 @@ Login page
 .login-wrapper{
   position: relative;
   z-index: 2;
+  max-width: 920px;
+  margin: auto;
 }
 .image-slider {
   position: absolute;
