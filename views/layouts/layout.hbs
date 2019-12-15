@@ -1,27 +1,34 @@
 <!DOCTYPE html>
-<html>
-  <head>
-
-    <title>{{title}}</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-  </head> 
-  <body>
-        
-  {{>header}}
-  <script
-    src="https://code.jquery.com/jquery-1.12.4.min.js"
-    integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-    crossorigin="anonymous"></script>
+<html lang="en">
+<head>
+  {{>head}}
+</head>
+<body class="{{bodyClass}}">
+  {{>navbar}}
+  {{>adminBar}}
   <div class="container">
-  {{{body}}}
+    {{>flashErrors}}
+    {{{ body }}}
   </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  </body>
+
+  <div class="container">
+    {{>footer}}
+  </div>
+  
+
+  <!-- Script files -->
+  <!-- Font Awesome -->
+  <script src="/javascripts/font-awesome.js"></script>
+  <!-- Handlebars js -->
+  <script type='text/javascript' src="/javascripts/handlebars-v4.0.11.js"></script>
+  <!-- Jquery -->
+  <script src="/javascripts/jquery-1.11.3.js"></script>
+  <!-- JSlider -->
+  <script src="/javascripts/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+  <!-- Bootstrap -->
+  <script src="/javascripts/bootstrap.js"></script>
+  <!-- Bootstrap Select -->
+  <script src="/javascripts/bootstrap-select.js"></script>
+</body>
 </html>
+
