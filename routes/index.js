@@ -113,34 +113,6 @@ router.post('/search', ensureAuthenticated, function(req, res, next){
 });
 
 // POST filters
-router.post('/filters', ensureAuthenticated, function(req, res, next){
-  let low   = req.body.lowPrice;
-  let high  = req.body.highPrice
-  if(low === "on" && high == undefined){
-    Product.find({ "price": {$lt:30} }, function(err, items){
-      if(err) {
-        console.log(err);
-      } else {
-        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
-      }
-    });
-  }
-  else if(low == undefined && high === "on"){
-    Product.find({ "price": {$gte:30} }, function(err, items){
-      if(err) {
-        console.log(err);
-      } else {
-        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
-      }
-    });
-  }
-  else{
-    res.redirect('/')
-  }
-  
-});
-
-
 router.post('/categories', ensureAuthenticated, function(req, res, next){
   let aman   = req.body.cman;
   let awoman  = req.body.cwoman;
@@ -155,6 +127,115 @@ router.post('/categories', ensureAuthenticated, function(req, res, next){
   }
   else if(aman == undefined && awoman === "on"){
     Product.find({ "category": {$eq:"woman"} }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else{
+    res.redirect('/')
+  }
+  
+});
+
+
+router.post('/filterPrices', ensureAuthenticated, function(req, res, next){
+  let low_f  = req.body.low_fifty;
+  let low_h = req.body.low_hundred;
+  let low_h_f = req.body.low_hundred_fifty;
+  let low_t_h = req.body.low_two_hundred;
+  let low_t_h_f = req.body.low_two_hundred_fifty;
+  let low_th_h = req.body.low_three_hundred;
+  let high_t_h  = req.body.high_three_hundred
+
+
+
+  if(low_f === "on" && low_h == undefined && low_h_f == undefined && low_t_h == undefined && low_t_h_f == undefined && low_th_h == undefined && high_t_h == undefined){
+    Product.find({ "price": {$lt:50} }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(low_f == undefined && low_h === "on" && low_h_f == undefined && low_t_h == undefined && low_t_h_f == undefined && low_th_h == undefined && high_t_h == undefined){
+    Product.find({ $and: [{"price": {$lt:100}}, {"price": {$gte:50}}] }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(low_f == undefined && low_h == undefined && low_h_f === "on" && low_t_h == undefined && low_t_h_f == undefined && low_th_h == undefined && high_t_h == undefined){
+    Product.find({ $and: [{"price": {$lt:150}}, {"price": {$gte:100}}] }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(low_f == undefined && low_h == undefined && low_h_f == undefined && low_t_h === "on" && low_t_h_f == undefined && low_th_h == undefined && high_t_h == undefined){
+    Product.find({ $and: [{"price": {$lt:200}}, {"price": {$gte:150}}] }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(low_f == undefined && low_h == undefined && low_h_f == undefined && low_t_h == undefined && low_t_h_f === "on" && low_th_h == undefined  && high_t_h == undefined){
+    Product.find({ $and: [{"price": {$lt:250}}, {"price": {$gte:200}}] }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(low_f == undefined && low_h == undefined && low_h_f == undefined && low_t_h == undefined && low_t_h_f == undefined && low_th_h ==="on" && high_t_h == undefined){
+    Product.find({ $and: [{"price": {$lt:300}}, {"price": {$gte:250}}] }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(low_f == undefined && low_h == undefined && low_h_f == undefined && low_t_h == undefined && low_t_h_f == undefined && low_th_h == undefined && high_t_h ==="on"){
+    Product.find({ "price": {$gte:300} }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else{
+    res.redirect('/')
+  }
+  
+});
+
+
+router.post('/filterTitles', ensureAuthenticated, function(req, res, next){
+  let atitle   = req.body.adidas;
+  let btitle  = req.body.nike;
+  if(atitle === "on" && btitle == undefined){
+    Product.find({ "title": {$eq:"Adidas Yeezy 750 Boost"} }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(atitle == undefined && btitle === "on"){
+    Product.find({ "title": {$eq:"Nike Air Force"} }, function(err, items){
       if(err) {
         console.log(err);
       } else {

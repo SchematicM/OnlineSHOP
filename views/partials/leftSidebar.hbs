@@ -1,18 +1,50 @@
+<br>
+<br>
 <!-- Filter starts -->
 <div class="filter-wrapper">
-    <div class="filter-title title border-bottom"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> Filters</div>
-    <form action="filters" method="POST">
+    <div class="filter-title title border-bottom"><i class="fa fa-sort-amount-desc" aria-hidden="true"></i> Filter Prices</div>
+    <form action="filterPrices" method="POST">
         <div class="filter-criterias">
             <div class="checkbox checkbox-success">
-                <input name="lowPrice" id="lowPrice" type="checkbox">
-                <label for="lowPrice">
-                    Less than $30.00
+                <input name="low_fifty" id="low_fifty" type="checkbox">
+                <label for="low_fifty">
+                    < $50
                 </label>
             </div>
             <div class="checkbox checkbox-success">
-                <input name="highPrice" id="highPrice" type="checkbox">
-                <label for="highPrice">
-                    More than $30.00
+                <input name="low_hundred" id="low_hundred" type="checkbox">
+                <label for="low_hundred">
+                    $50-$100
+                </label>
+            </div>
+            <div class="checkbox checkbox-success">
+                <input name="low_hundred_fifty" id="low_hundred_fifty" type="checkbox">
+                <label for="low_hundred_fifty">
+                    $100-$150
+                </label>
+            </div>
+            <div class="checkbox checkbox-success">
+                <input name="low_two_hundred" id="low_two_hundred" type="checkbox">
+                <label for="low_two_hundred">
+                    $150-$200
+                </label>
+            </div>
+            <div class="checkbox checkbox-success">
+                <input name="low_two_hundred_fifty" id="low_two_hundred_fifty" type="checkbox">
+                <label for="low_two_hundred_fifty">
+                    $200-$250
+                </label>
+            </div>
+            <div class="checkbox checkbox-success">
+                <input name="low_three_hundred" id="low_three_hundred" type="checkbox">
+                <label for="low_three_hundred">
+                    $250-$300
+                </label>
+            </div>
+            <div class="checkbox checkbox-success">
+                <input name="high_three_hundred" id="high_three_hundred" type="checkbox">
+                <label for="high_three_hundred">
+                    > $300.00
                 </label>
             </div>
         </div>
