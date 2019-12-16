@@ -141,6 +141,33 @@ router.post('/filters', ensureAuthenticated, function(req, res, next){
 });
 
 
+router.post('/categories', ensureAuthenticated, function(req, res, next){
+  let aman   = req.body.cman;
+  let awoman  = req.body.cwoman;
+  if(aman === "on" && awoman == undefined){
+    Product.find({ "category": {$eq:"man"} }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else if(aman == undefined && awoman === "on"){
+    Product.find({ "category": {$eq:"woman"} }, function(err, items){
+      if(err) {
+        console.log(err);
+      } else {
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+      }
+    });
+  }
+  else{
+    res.redirect('/')
+  }
+  
+});
+
 function ensureAuthenticated(req, res, next){
   if(req.isAuthenticated()){
     return next();
@@ -161,7 +188,8 @@ router.post('/insert', ensureAuthenticated, function(req, res, next){
     imagePath   : req.body.imagePath,
     title       : req.body.title,
     description : req.body.description,
-    price       : req.body.price
+    price       : req.body.price,
+    category    : req.body.category
   });
   product.save();
   req.flash('success_msg', 'A new product successfully added to database');
@@ -212,7 +240,8 @@ router.post('/update', ensureAuthenticated, function(req, res, next){
     "imagePath"   : req.body.imagePath,
     "title"       : req.body.title,
     "description" : req.body.description,
-    "price"       : req.body.price
+    "price"       : req.body.price,
+    "category"    : req.body.category
     }
   },
   { new: true }, function(err, result){
