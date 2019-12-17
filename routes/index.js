@@ -35,6 +35,10 @@ router.get('/product-overview', ensureAuthenticated, function(req, res, next) {
   });
 });
 
+router.get('/contacts', function(req, res){
+    res.render('contacts', { title: 'Contacts'});
+});
+
 // GET shopping cart
 router.get('/add-to-bag/:id', ensureAuthenticated, function(req, res, next){
     var productId = req.params.id;
@@ -92,6 +96,9 @@ router.get('/order-history', ensureAuthenticated, function(req, res, next){
     }
   });
 });
+
+
+
 
 // POST search page
 router.post('/search', ensureAuthenticated, function(req, res, next){
