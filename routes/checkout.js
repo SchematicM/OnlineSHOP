@@ -29,7 +29,7 @@ router.post('/checkout-process', function(req, res){
       items.push({"name": cartArray[item].item.title,
                  "sku": cartArray[item]._id,
                  "price": cartArray[item].item.price,
-                 "currency": "CAD",
+                 "currency": "USD",
                  "quantity": cartArray[item].qty})
     }
 
@@ -51,7 +51,7 @@ router.post('/checkout-process', function(req, res){
             "items": items
         },
         "amount": {
-            "currency": "CAD",
+            "currency": "USD",
             "total": totalPriceString
         },
         "description": "This is the payment description."
@@ -87,7 +87,7 @@ router.get('/checkout-success', ensureAuthenticated, function(req, res){
     "payer_id": payerID,
     "transactions": [{
         "amount": {
-            "currency": "CAD",
+            "currency": "USD",
             "total": totalPriceString
         }
     }]

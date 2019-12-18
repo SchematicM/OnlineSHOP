@@ -8,70 +8,70 @@ mongoose.connect('mongodb://localhost/shoppingApp');
 var products = [
     new Product({
         imagePath   : 'https://stockx.imgix.net/Adidas-Yeezy-Boost-350-V2-Semi-Frozen-Yellow-2.jpg?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas',
+        title       : 'Adidas Yeezy 350 Boost',
         description : 'Adidas Yeezy 350 Boost V2 Semi-Frozen Yellow',
         category    : 'man',
         price       : 339.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Adidas-Human-Race-NMD-Pharrell-Oreo.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas',
+        title       : 'Adidas Human Race',
         description : 'Adidas Human Race Pharrell Williams Oreo',
         category    : 'man',
         price       : 339.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Adidas-NMD-R1-Core-Black-Carbon.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas',
+        title       : 'Adidas NMD R1',
         description : 'Adidas NMD R1 Core Black',
         category    : 'woman',
         price       : 179.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Adidas-Yeezy-Boost-350-V2-Beluga-2pt0.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas',
+        title       : 'Adidas Yeezy 350 Boost',
         description : 'Adidas Yeezy 350 Boost V2 Beluga 2.0',
         category    : 'man',
         price       : 339.99
     }),
     new Product({
         imagePath   : 'https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/2/0/201484_1.jpg',
-        title       : 'Adidas',
+        title       : 'Adidas Yeezy 750 Boost',
         description : 'Adidas Yeezy 750 Boost Chocolate',
         category    : 'man',
         price       : 449.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Air-Jordan-3-Retro-Black-Cement-2018-1.jpg?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike',
+        title       : 'Nike Air Jordan',
         description : 'Nike Air Jordan 3 Black Cement',
         category    : 'man',
         price       : 259.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Nike-Air-Force-1-Mid-Black-2016.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike',
+        title       : 'Nike Air Force',
         description : 'Nike Air Force 1 Black (2016)',
         category    : 'man',
         price       : 119.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Nike-Air-Max-1-Air-Max-Day-2017-GS.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike',
+        title       : 'Nike Air Max 1',
         description : 'Nike Air Max 1 Air Max Day Red 2017',
         category    : 'woman',
         price       : 119.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Nike-Blazer-Mid-Off-White.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike',
+        title       : 'Nike Blaze Mid',
         description : 'Nike Blaze Mid Off-White',
         category    : 'man',
         price       : 179.99
     }),
     new Product({
         imagePath   : 'https://stockx.imgix.net/Adidas-Ultra-Boost-4-Oreo.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas',
+        title       : 'Adidas Ultra Boost',
         description : 'Adidas Ultra Boost 4.0 Cookies and Cream',
         category    : 'man',
         price       : 279.99

@@ -141,8 +141,7 @@ router.post('/categories', ensureAuthenticated, function(req, res, next){
   }
   else{
     res.redirect('/')
-  }
-  
+  }  
 });
 
 
@@ -230,21 +229,41 @@ router.post('/filterPrices', ensureAuthenticated, function(req, res, next){
 router.post('/filterTitles', ensureAuthenticated, function(req, res, next){
   let atitle   = req.body.adidas;
   let btitle  = req.body.nike;
+
+  let keyword = "adidas";
+  let searchParams = keyword;
+  console.log(keyword);
+  keyword = keyword.split(",");
+  console.log(keyword);
+  for (i = 0; i < keyword.length; i++){
+    keyword[i] = new RegExp(escapeRegex(keyword[i]), 'gi');
+  }
+
+  let keyword1 = "nike";
+  let searchParams1 = keyword1;
+  console.log(keyword1);
+  keyword1 = keyword1.split(",");
+  console.log(keyword1);
+  for (i = 0; i < keyword1.length; i++){
+    keyword1[i] = new RegExp(escapeRegex(keyword1[i]), 'gi');
+  }
+
+
   if(atitle === "on" && btitle == undefined){
-    Product.find({ "title": {$eq:"Adidas"} }, function(err, items){
+    Product.find({ "title": {$in:keyword} }, function(err, items){
       if(err) {
         console.log(err);
       } else {
-        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname, searchKeywords: searchParams});
       }
     });
   }
   else if(atitle == undefined && btitle === "on"){
-    Product.find({ "title": {$eq:"Nike"} }, function(err, items){
+    Product.find({ "title": {$in:keyword1} }, function(err, items){
       if(err) {
         console.log(err);
       } else {
-        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname});
+        res.render('index', { title: 'Products', products: items, userFirstName: req.user.fullname, searchKeywords: searchParams});
       }
     });
   }
