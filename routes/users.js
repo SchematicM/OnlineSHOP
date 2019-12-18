@@ -98,6 +98,9 @@ router.post('/login',
 });
 
 
+router.get('/contacts', function(req, res){
+    res.render('contacts', { title: 'Contacts'});
+});
 
 router.get('/logout', function(req, res){
     req.logout();
