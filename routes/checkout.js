@@ -7,8 +7,8 @@ var Order                   = require('../models/order');
 // Paypal configuration
 paypal.configure({
   'mode': 'sandbox', //sandbox or live
-  'client_id': 'AY95JiVsKZzvyLwHL4Jjo3jP9apIYlgoM-tVOIYmc6quV4O3COyVpCjdoWheVdAT79gCxCrOaQrlt0CN',
-  'client_secret': 'EB4sgOLYE2sR_qmHw4fFE7WFmDV8_5V0Voo63-wdyZVB-YK9Biw063fD51bvjHT6WseNB8Phj59u9PZN'
+  'client_id': 'AQ7r1zK3Z7piY0Hil2Y6qGYAoLXmA4E3USFEkC0E_my-wgU1DuTNSMqp-0v3vcTInWphSrq6aOSkBqlb',
+  'client_secret': 'EGOZc4_0tUmba-1EzOvTtBLC-kojI0nTnAq4PdVB3XAV15ZQz4f5WjgOt7Ik0fqrSLsrA_nbuXKa5Q0y'
 });
 
 // GET checkout page

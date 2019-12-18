@@ -233,7 +233,7 @@ router.post('/filterTitles', ensureAuthenticated, function(req, res, next){
   let atitle   = req.body.adidas;
   let btitle  = req.body.nike;
   if(atitle === "on" && btitle == undefined){
-    Product.find({ "title": {$eq:"Adidas Yeezy 750 Boost"} }, function(err, items){
+    Product.find({ "title": {$eq:"Adidas"} }, function(err, items){
       if(err) {
         console.log(err);
       } else {
@@ -242,7 +242,7 @@ router.post('/filterTitles', ensureAuthenticated, function(req, res, next){
     });
   }
   else if(atitle == undefined && btitle === "on"){
-    Product.find({ "title": {$eq:"Nike Air Force"} }, function(err, items){
+    Product.find({ "title": {$eq:"Nike"} }, function(err, items){
       if(err) {
         console.log(err);
       } else {
