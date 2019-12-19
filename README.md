@@ -7,3 +7,7 @@ How to run our online shop in your own PC?
  4. Go to folder “seed”( cd seed) and run its file “node populate-for-startup.js” to push  into database information about products and users. Then get out of this folder in one level back, using “cd ..” ;
  5. Write “npm start” to run a server;
  6. Go to http: //localhost:3000 to see our online shop :)
+ 
+ You may to login with user, which is already exist:
+ e-mail: d-pierre90@hotmail.com
+ password: 1234
