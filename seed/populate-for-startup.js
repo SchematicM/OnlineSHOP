@@ -7,73 +7,73 @@ mongoose.connect('mongodb://localhost/shoppingApp');
 
 var products = [
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Adidas-Yeezy-Boost-350-V2-Semi-Frozen-Yellow-2.jpg?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas Yeezy 350 Boost',
-        description : 'Adidas Yeezy 350 Boost V2 Semi-Frozen Yellow',
+        imagePath   : 'https://sneakercon-prodblue.s3.amazonaws.com/pictures/adidas-yeezy-boost-700-wave-runner-01-B75571.jpg',
+        title       : 'Adidas Yeezy Boost 700',
+        description : 'Adidas Yeezy Boost 700 Wave Runner',
         category    : 'man',
         price       : 339.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Adidas-Human-Race-NMD-Pharrell-Oreo.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas Human Race',
-        description : 'Adidas Human Race Pharrell Williams Oreo',
+        imagePath   : 'https://sneakercon-prodg.s3.amazonaws.com/pictures/nike-dunk-low-x-off-white-university-red-01-CT0856_600.jpg',
+        title       : 'Nike Dunk Low',
+        description : 'Nike Dunk Low x Off-White University Red',
         category    : 'man',
         price       : 339.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Adidas-NMD-R1-Core-Black-Carbon.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas NMD R1',
-        description : 'Adidas NMD R1 Core Black',
-        category    : 'woman',
+        imagePath   : 'https://sneakercon-prodg.s3.amazonaws.com/pictures/adidas-yeezy-boost-350-v-2-yecheil-non-reflective-01-FW5190.jpg',
+        title       : 'Adidas Yeezy Boost 350',
+        description : 'Adidas Yeezy Boost 350 V2 Yecheil Non-Reflective',
+        category    : 'man',
         price       : 179.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Adidas-Yeezy-Boost-350-V2-Beluga-2pt0.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas Yeezy 350 Boost',
-        description : 'Adidas Yeezy 350 Boost V2 Beluga 2.0',
+        imagePath   : 'https://sneakercon-prod.s3.amazonaws.com/pictures/air-jordan-3-jth-bio-beige-01-AV6683_200.jpg',
+        title       : 'Nike Air Jordan',
+        description : 'Nike Air Jordan 3 JTH Bio Beige',
         category    : 'man',
         price       : 339.99
     }),
     new Product({
-        imagePath   : 'https://www.flightclub.com/media/catalog/product/cache/1/image/1600x1140/9df78eab33525d08d6e5fb8d27136e95/2/0/201484_1.jpg',
-        title       : 'Adidas Yeezy 750 Boost',
-        description : 'Adidas Yeezy 750 Boost Chocolate',
-        category    : 'man',
+        imagePath   : 'https://sneakercon-prodg.s3.amazonaws.com/pictures/nike-air-max-720-wmns-sunset-01-AR9293_500.jpg',
+        title       : 'Nike Air Max 720',
+        description : 'Nike',
+        category    : 'woman',
         price       : 449.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Air-Jordan-3-Retro-Black-Cement-2018-1.jpg?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike Air Jordan',
-        description : 'Nike Air Jordan 3 Black Cement',
-        category    : 'man',
+        imagePath   : 'https://sneakercon-prod.s3.amazonaws.com/pictures/air-jordan-12-retro-wmns-vachetta-tan-01-AO6068_203.jpg',
+        title       : 'Nike Air Jordan 12',
+        description : 'Nike Air Jordan 12 Retro WMNS Vachetta Tan',
+        category    : 'woman',
         price       : 259.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Nike-Air-Force-1-Mid-Black-2016.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike Air Force',
-        description : 'Nike Air Force 1 Black (2016)',
+        imagePath   : 'https://sneakercon-prod.s3.amazonaws.com/pictures/nike-air-more-uptempo-obsidian-01-921948_400.jpg',
+        title       : 'Nike Air More',
+        description : 'Nike Air More Uptempo Obsidian',
         category    : 'man',
         price       : 119.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Nike-Air-Max-1-Air-Max-Day-2017-GS.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike Air Max 1',
-        description : 'Nike Air Max 1 Air Max Day Red 2017',
-        category    : 'woman',
+        imagePath   : 'https://sneakercon-prod.s3.amazonaws.com/pictures/air-jordan-31-chicago-01-845037_600.jpg',
+        title       : 'Nike Air Jordan 31',
+        description : 'Nike Air Jordan 31 Chicago',
+        category    : 'man',
         price       : 119.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Nike-Blazer-Mid-Off-White.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Nike Blaze Mid',
-        description : 'Nike Blaze Mid Off-White',
+        imagePath   : 'https://sneakercon-prodg.s3.amazonaws.com/pictures/nike-air-force-1-prm-x-clot-game-royal-01-CJ5290_400.jpg',
+        title       : 'Nike Air Force 1',
+        description : 'Nike  Air Force 1 PRM x Clot Game Royal',
         category    : 'man',
         price       : 179.99
     }),
     new Product({
-        imagePath   : 'https://stockx.imgix.net/Adidas-Ultra-Boost-4-Oreo.png?fit=fill&bg=FFFFFF&w=1400&h=1000&auto=format,compress&trim=color&q=40',
-        title       : 'Adidas Ultra Boost',
-        description : 'Adidas Ultra Boost 4.0 Cookies and Cream',
-        category    : 'man',
+        imagePath   : 'https://sneakercon-prod.s3.amazonaws.com/pictures/adidas-nmd-r1-wmns-raw-pink-01-S76006.jpg',
+        title       : 'Adidas NMD R1',
+        description : 'Adidas NMD R1 WMNS Raw Pink',
+        category    : 'woman',
         price       : 279.99
     })
 ];
