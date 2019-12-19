@@ -232,18 +232,14 @@ router.post('/filterTitles', ensureAuthenticated, function(req, res, next){
 
   let keyword = "adidas";
   let searchParams = keyword;
-  console.log(keyword);
   keyword = keyword.split(",");
-  console.log(keyword);
   for (i = 0; i < keyword.length; i++){
     keyword[i] = new RegExp(escapeRegex(keyword[i]), 'gi');
   }
 
   let keyword1 = "nike";
   let searchParams1 = keyword1;
-  console.log(keyword1);
   keyword1 = keyword1.split(",");
-  console.log(keyword1);
   for (i = 0; i < keyword1.length; i++){
     keyword1[i] = new RegExp(escapeRegex(keyword1[i]), 'gi');
   }
