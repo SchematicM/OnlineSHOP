@@ -9,7 +9,7 @@
             <div class="product-title"><strong>{{product.title}}</strong></div>
             <div class="product-description">Description: {{product.description}}</div>
             <div class="product-category">Category: {{product.category}}</div>
-            <div class="product-price">₴{{product.price}} USD</div>
+            <div class="product-price">${{product.price}} USD</div>
             <div class="product-button">
                 <a href="/add-to-bag/{{product._id}}" class="btn btn-primary full-width pad10"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Add to bag</a>
             </div>
@@ -23,25 +23,28 @@
                         <form class="form" action="//formspree.io/Solomiyar2000@gmail.com" method="post">
                             <div class="form-group"
                                 <label for="exampeInputName">Name</label>
-                                <input type="text" class="form-control" id="exampeInputName" name="name" placeHolder="Your name">
+                                <input type="text" class="form-control" id="exampeInputName" name="name" required placeHolder="Your name">
                             </div>
 
                             <div class="form-group"
                                 <label for="exampeInputEmail">Email</label>
-                                <input type="text" class="form-control" id="exampeInputEmail" name="email" placeHolder="Your email" require>
+                                <input type="text" class="form-control" id="exampeInputEmail" name="email" required placeHolder="Your email">
                             </div>                        
                             <div class="form-group"
                                 <label for="exampeInputMassage">Massage</label>
                                 <br>
-                                <textarea class="form-control" id="exampeInputMassage" name="massage" rows="7" placeHolder="Your massage"></textarea>
+                                <textarea class="form-control" id="exampeInputMassage" name="massage" rows="7" required placeHolder="Your massage"></textarea>
                                 <input type="hidden" name="_next" value="//site.io/thanks.html" />
                                 <input type="hidden" name="_cc" value="tyxa.khoma17@gmail.com" />
-                                <input type="hidden" name="_subject" value="New Order!" />
+                                <input type="hidden" name="_subject" value="New Comment!" />
                                 <input type="text" name="_gotcha" style="display:none" />
                             </div>
                             <button type="submit" class="btn btn-primary full-width pad10 "><i class="fa fa-comment" aria-hidden="true"></i> Send</button>    
 
-                        </form>               
+                        </form>    
+                        <br>
+                        <br>
+                        <br>           
                         </div>
                     </div>
         </div>
