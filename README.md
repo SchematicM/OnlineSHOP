@@ -9,5 +9,5 @@ How to run our online shop in your own PC?
  6. Go to http: //localhost:3000 to see our online shop :)
  
  You may to login with user, which is already exist:
- e-mail: d-pierre90@hotmail.com
+ e-mail: khoma@hotmail.com
  password: 1234
